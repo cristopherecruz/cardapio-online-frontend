@@ -1,0 +1,94 @@
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.page__title{
+    padding-bottom: 30px;
+    padding-top: 15px;
+    font-size: 30px;
+}
+
+.body__header {
+    width: 100%;
+    padding-block: 10px;
+    padding: 20px 0;
+}
+
+.header__title{
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+.body__button {
+    background-color: #111827;
+    border: 1px solid transparent;
+    border-radius: .75rem;
+    box-sizing: border-box;
+    color: yellow;
+    cursor: pointer;
+    flex: 0 0 auto;
+    font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+    padding: .75rem 1.2rem;
+    text-align: center;
+    text-decoration: none #6B7280 solid;
+    text-decoration-thickness: auto;
+    transition-duration: .2s;
+    transition-property: background-color,border-color,color,fill,stroke;
+    transition-timing-function: cubic-bezier(.4, 0, 0.2, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: auto;
+}
+
+.body__button:hover {
+    background-color: #374151;
+}
+
+.body__button:focus {
+    box-shadow: none;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+}
+
+.body__nav, section {
+    float: left;
+}
+
+.body__nav {
+    width: 15%;
+    height: 100%;
+    margin-right: 10px;
+    padding: 200px 0;
+}
+
+.body__section {
+    width: 84%;
+    height: 100%;
+    padding: 200px 0;
+}
+
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.body {
+    background: #1a1a1a;
+    color: #f8f40c;
+    text-align: center;
+    margin: 0;
+}
+
+header,
+nav,
+section {
+    border: 1px solid rgba(255,255,255,0.8);
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
