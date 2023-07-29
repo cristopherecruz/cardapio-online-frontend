@@ -1,33 +1,65 @@
 <!DOCTYPE html>
 
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <head>
+            <meta charset="UTF-8">
+            <title>Title</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
-    <link rel="stylesheet" href="assets/css/cadastro_combo.css">
-</head>
-    <body class="body">
-        <main>
-            <div class="wrapper">
-                <h1 class="page__title">Elite Lanches Admin</h1>
-                <header class="body__header">
+            <link rel="stylesheet" href="assets/css/reset.css">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap">
+            <link rel="stylesheet"
+                  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+            <link rel="stylesheet" href="assets/css/cadastro_combo.css">
+        </head>
+        <body class="body">
+            <header class="body__header">
+                <div class="header__nav">
+                    <h1 class="page__title">Elite Lanches Admin</h1>
                     <h1 class="header__title">Cadastro Combos</h1>
-                </header>
-                <nav class="body__nav">
-                    NAVEGADOR
-                </nav>
-                <section class="body__section">
-                    CONTEUDO
-                </section>
-                <button class="body__button">
-                    OK
-                </button>
-            </div>
-        </main>
-    </body>
+                    <nav class="body__nav">
+                        NAVEGADOR
+                    </nav>
+                </div>
+            </header>
+            <main class="main">
+                <form class="main__form">
+                    <div>
+                        <label class="form__label" for="nome">Nome</label>
+                        <input class="form__input" type="text" name="nome" id="nome">
+                    </div>
+                    <div>
+                        <label class="form__label" for="descricao">Descricao</label>
+                        <input class="form__input" type="text" name="descricao" id="descricao">
+                    </div>
+                    <div>
+                        <label class="form__label" for="preco">Preco</label>
+                        <input class="form__input" type="text" name="preco" id="preco">
+                    </div>
+                    <div class="pick-list">
+                        <div>
+                            <h4>Available Items</h4>
+                            <ul id="available-items">
+                                <li class="pick-list-item" onclick="moveToSelected(this)">
+                                    <div class="card">
+
+                                    </div>
+                                </li>
+                                <li class="pick-list-item" onclick="moveToSelected(this)">Item 2</li>
+                                <li class="pick-list-item" onclick="moveToSelected(this)">Item 3</li>
+                                <li class="pick-list-item" onclick="moveToSelected(this)">Item 4</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>Selected Items</h4>
+                            <ul id="selected-items">
+                                <!-- Selected items will be added here -->
+                            </ul>
+                        </div>
+                    </div>
+                    <input class="body__button" type="submit" value="OK">
+                </form>
+            </main>
+            <script src="./assets/js/cadastro_combo.js"></script>
+        </body>
 </html>
