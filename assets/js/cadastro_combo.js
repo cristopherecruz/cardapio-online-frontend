@@ -1,11 +1,46 @@
 function moveToSelected(item) {
-    // Remove the item from the available list
+    // Remove o item da lista de disponíveis
     item.parentNode.removeChild(item);
 
-    // Add the item to the selected list
+    // Adiciona o item à lista de selecionados
     const selectedList = document.getElementById("selected-items");
     selectedList.appendChild(item);
 
-    // Add a class to mark the item as selected
+    // Adiciona uma classe para marcar o item como selecionado
     item.classList.add("selected-item");
+
+    // Altera o evento de clique para mover o item de volta à lista de disponíveis
+    item.onclick = function() {
+        moveToAvailable(item);
+    };
 }
+
+function moveToAvailable(item) {
+    // Remove o item da lista de selecionados
+    item.parentNode.removeChild(item);
+
+    // Remove a classe que marca o item como selecionado
+    item.classList.remove("selected-item");
+
+    // Adiciona o item à lista de disponíveis
+    const availableList = document.getElementById("available-items");
+    availableList.appendChild(item);
+
+    // Altera o evento de clique para mover o item para a lista de selecionados
+    item.onclick = function() {
+        moveToSelected(item);
+    };
+}
+
+// Função para inicializar os eventos de clique para os itens na lista de disponíveis
+function initializeAvailableItems() {
+    const availableItems = document.querySelectorAll("#available-items > li");
+    availableItems.forEach(item => {
+        item.onclick = function() {
+            moveToSelected(item);
+        };
+    });
+}
+
+// Chame esta função quando a página for carregada
+initializeAvailableItems();
