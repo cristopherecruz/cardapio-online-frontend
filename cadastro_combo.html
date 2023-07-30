@@ -38,20 +38,33 @@
                     </div>
                     <div class="form__pick__list__container">
                         <div class="form__pick__list">
-                            <h4>Available Items</h4>
+                            <h4 class="picklist__title__text">Itens Disponíveis</h4>
                             <ul id="available-items">
-                                <li class="pick-list-item" onclick="moveToSelected(this)">
-                                    <div class="card">
-
+                                <li class="picklist__item" onclick="moveToSelected(this)">
+                                    <div class="picklist__card">
+                                        <img class="picklist__img" src="assets/img/hamburguer_bacon.jpeg" alt="Lanche">
+                                        <h1 class="picklist__item__text">Elite Tudo</h1>
+                                        <h1 class="picklist__item__text">30R$</h1>
                                     </div>
                                 </li>
-                                <li class="pick-list-item" onclick="moveToSelected(this)">Elite Dog</li>
-                                <li class="pick-list-item" onclick="moveToSelected(this)">Coca</li>
-                                <li class="pick-list-item" onclick="moveToSelected(this)">Porção Batata</li>
+                                <li class="picklist__item" onclick="moveToSelected(this)">
+                                    <div class="picklist__card">
+                                        <img class="picklist__img" src="assets/img/hamburguer_bacon.jpeg" alt="Lanche">
+                                        <h1 class="picklist__item__text">Elite Bacon</h1>
+                                        <h1 class="picklist__item__text">25R$</h1>
+                                    </div>
+                                </li>
+                                <li class="picklist__item" onclick="moveToSelected(this)">
+                                    <div class="picklist__card">
+                                        <img class="picklist__img" src="assets/img/coca.png" alt="Lanche">
+                                        <h1 class="picklist__item__text">Coca</h1>
+                                        <h1 class="picklist__item__text">10R$</h1>
+                                    </div>
+                                </li>
                             </ul>
                         </div>
                         <div class="form__pick__list">
-                            <h4>Selected Items</h4>
+                            <h4 class="picklist__title__text">Itens Selecionados</h4>
                             <ul id="selected-items">
                                 <!-- Selected items will be added here -->
                             </ul>

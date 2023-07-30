@@ -8,7 +8,6 @@
 }
 
 .page__title{
-
     font-size: 30px;
 }
 
@@ -102,17 +101,10 @@
     box-sizing: border-box;
 }
 
-.header__nav,
-nav,
-form {
-    border: 1px solid rgba(255,255,255,0.8);
-    border-radius: 5px;
-}
-
 .form__pick__list__container{
     display: flex;
     justify-content: flex-start;
-    gap: 1rem;
+    gap: 15rem;
 }
 
 .form__pick-list {
@@ -123,14 +115,39 @@ form {
     padding: 10px;
 }
 
-.pick-list-item {
-    padding: 5px;
+.picklist__item {
+    padding-top: 15px;
     cursor: pointer;
 }
 
-/* Styling for selected items */
+.picklist__title__text{
+    font-size: 30px;
+}
+
+.picklist__item__text{
+    font-size: 20px;
+}
+
+.picklist__card{
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.picklist__img{
+    width: 90px;
+    height: 90px;
+}
+
 .selected-item {
     background-color: #374151;
+}
+
+.header__nav,
+nav,
+form {
+    border: 1px solid rgba(255,255,255,0.8);
+    border-radius: 5px;
 }
 
 @media screen and (min-width: 1440px) {
