@@ -1,0 +1,95 @@
+.menu-lateral {
+    display: flex;
+    flex-direction: column;
+    background-color: #15191C;
+    width: 75vw;
+    height: 80vh;
+    position: absolute;
+    left: -100vw;
+    transition: .25s;
+    top: 20vh;
+}
+
+.menu-lateral .menu-lateral__logo {
+    display: none;
+}
+
+.menu-lateral__link {
+    height: 64px;
+    text-decoration: none;
+    color: #95999C;
+    padding-left: 64px;
+    display: flex;
+    align-items: center;
+}
+
+.menu-lateral__link--inicio i::before {
+    content: "\e88a";
+    position: absolute;
+    left: 24px;
+}
+
+.menu-lateral__link--cliente::before {
+    content: "\e7fd";
+    position: absolute;
+    left: 24px;
+}
+
+.menu-lateral__link--fornecedor::before {
+    content: "\e558";
+    position: absolute;
+    left: 24px;
+}
+
+.menu-lateral__link--estoque::before {
+    content: "\e1a1";
+    position: absolute;
+    left: 24px;
+}
+
+.menu-lateral__link--fiscal::before {
+    content: "\e227";
+    position: absolute;
+    left: 24px;
+}
+
+.menu-lateral__link--relatorios::before {
+    content: "\e0ee";
+    position: absolute;
+    left: 24px;
+}
+
+.menu-lateral__link--ativo {
+    color: #FFFFFF;
+    padding-left: 56px;
+    border-left: 8px solid #FFFFFF;
+}
+
+.menu-lateral--ativo {
+    left: 0;
+    transition: .25s;
+}
+
+@media screen and (min-width: 1440px) {
+
+    .menu-lateral {
+        display: flex;
+        grid-area: menu;
+        width: 100%;
+        flex-direction: column;
+        background-color: #15191C;
+        height: 100%;
+        transition: .25s;
+        position: initial;
+        align-items: center;
+    }
+
+    .menu-lateral .menu-lateral__logo {
+        display: initial;
+        max-width: 100%;
+        width: 8em;
+        height: auto;
+        margin: 1em 1em 2.5em 1em;
+    }
+
+}

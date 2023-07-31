@@ -1,61 +1,98 @@
 .body {
+    font-family: 'Montserrat', sans-serif;
     display: grid;
     grid-template-rows: 20vh 80vh;
-    background: #1a1a1a;
-    color: #f8f40c;
-    text-align: center;
-    margin: 0;
+    color: #FFFFFF;
 }
 
-.page__title{
-    font-size: 30px;
+.body__header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #15191C;
+    padding: 1em 1em 1em 1em;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.16);
+}
+
+.header__menu i::before {
+    content: "\e5d2";
+    color: #FFFFFF;
+}
+
+.header__notificacao i::before {
+    content: "\e7f4";
+    color: #FFFFFF;
 }
 
 .main {
     padding: 1em 1em 1em 1em;
+    background: #1D232A;
 }
 
-.body__header {
-    padding: 1em 1em 1em 1em;
-}
-
-.header__nav {
+.main__form {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-    padding-block: 10px;
-    height: 100%;
+    row-gap: 0.5em;
 }
 
-.header__title{
-    font-size: 20px;
-    padding-top: 10px;
+.form__input {
+    padding: 0.5em 0.5em 0.5em 0.5em;
+    border-radius: 5px;
+}
+
+.form__pick__list__container {
+    display: flex;
+    flex-direction: column;
+}
+
+.picklist__title__text{
+    font-size: 1em;
+}
+
+.selected-item {
+    background-color: #374151;
+}
+
+.picklist__item {
+    padding-top: 1rem;
+    cursor: pointer;
+}
+
+.picklist__img {
+    grid-area: img;
+    max-width: 70%;
+    height: auto;
+    justify-self: center;
+}
+
+.picklist__item__text{
+    grid-area: nome;
+}
+
+.picklist__item__preco {
+    grid-area: preco;
+}
+
+.picklist__card{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+            "img nome"
+            "img preco";
 }
 
 .body__button {
     background-color: #111827;
     border: 1px solid transparent;
     border-radius: .75rem;
-    box-sizing: border-box;
     color: yellow;
     cursor: pointer;
-    flex: 0 0 auto;
     font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
     font-size: 1.125rem;
     font-weight: 600;
-    line-height: 1.5rem;
     padding: .75rem 1.2rem;
     text-align: center;
-    text-decoration: none #6B7280 solid;
-    text-decoration-thickness: auto;
     transition-duration: .2s;
-    transition-property: background-color,border-color,color,fill,stroke;
-    transition-timing-function: cubic-bezier(.4, 0, 0.2, 1);
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    width: auto;
 }
 
 .body__button:hover {
@@ -68,89 +105,81 @@
     outline-offset: 2px;
 }
 
-.body__nav {
-    float: left;
-    display: none;
-    width: 15%;
-    height: 100%;
-    margin-right: 10px;
-}
-
-.main__form {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    row-gap: 1em;
-    padding: 1em 1em 1em 1em;
-}
-
-.form__label {
-    display: flex;
-    justify-content: flex-start;
-}
-
-.form__input {
-    width: 100%;
-    padding: 0.5em 0.5em 0.5em 0.5em;
-    border-radius: 5px;
-}
-
-*, *:before, *:after {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-.form__pick__list__container{
-    display: flex;
-    justify-content: flex-start;
-    gap: 15rem;
-}
-
-.form__pick-list {
-    width: 40%;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-    padding: 10px;
-}
-
-.picklist__item {
-    padding-top: 15px;
-    cursor: pointer;
-}
-
-.picklist__title__text{
-    font-size: 30px;
-}
-
-.picklist__item__text{
-    font-size: 20px;
-}
-
-.picklist__card{
-    display: flex;
-    justify-content: flex-start;
-    gap: 1rem;
-}
-
-.picklist__img{
-    width: 90px;
-    height: 90px;
-}
-
-.selected-item {
-    background-color: #374151;
-}
-
-.header__nav,
-nav,
-form {
-    border: 1px solid rgba(255,255,255,0.8);
-    border-radius: 5px;
-}
-
 @media screen and (min-width: 1440px) {
 
+    .body {
+        display: grid;
+        grid-template-rows: 20vh 80vh;
+        grid-template-columns: auto 1fr;
+        grid-template-areas:
+                "menu header"
+                "menu content";
+        color: #FFFFFF;
+    }
+
+    .header__menu, .header__logo {
+        display: none;
+    }
+
+    .main {
+        display: grid;
+        grid-area: content;
+    }
+
+    .main__form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 20% 70% 5%;
+        grid-template-areas:
+                "field field"
+                "picklist picklist"
+                "botao botao";
+
+    }
+
+    .body__header {
+        grid-area: header;
+        padding: 1em 4.5em 1em 4.5em;
+    }
+
+    .form__pick__list__container {
+        display: grid;
+        grid-area: picklist;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 50% 50%;
+        grid-template-areas: "disponivel selecionados";
+    }
+
+    .picklist__card{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+            "img nome"
+            "img preco";
+    }
+
+    .picklist__img {
+        grid-area: img;
+        max-width: 20%;
+        height: auto;
+        justify-self: center;
+    }
+
+    .form__field {
+        grid-area: field;
+    }
+
+    .form__pick__list__container .container__disponivel {
+        grid-area: disponivel;
+    }
+
+    .form__pick__list__container .container__selecionados {
+        grid-area: selecionados;
+    }
+
+    .body__button {
+        grid-area: botao;
+    }
 
 }
