@@ -1,0 +1,154 @@
+.body {
+    font-family: 'Montserrat', sans-serif;
+    display: grid;
+    grid-template-rows: 20vh 80vh;
+    color: #FFFFFF;
+}
+
+.body__header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #15191C;
+    padding: 1em 1em 1em 1em;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.16);
+}
+
+.header__menu i::before {
+    content: "\e5d2";
+    color: #FFFFFF;
+}
+
+.header__notificacao i::before {
+    content: "\e7f4";
+    color: #FFFFFF;
+}
+
+.main {
+    padding: 1em 1em 1em 1em;
+    background: #1D232A;
+}
+
+.main__form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5em;
+}
+
+.form__input {
+    padding: 0.5em 0.5em 0.5em 0.5em;
+    border-radius: 5px;
+}
+
+.form__pick__list__container {
+    display: flex;
+    flex-direction: column;
+}
+
+.picklist__title__text{
+    font-size: 1em;
+}
+
+.selected-item {
+    background-color: #374151;
+}
+
+.picklist__item {
+    padding-top: 1rem;
+    cursor: pointer;
+}
+
+.picklist__item__text{
+    grid-area: nome;
+}
+
+.picklist__item__preco {
+    grid-area: preco;
+}
+
+.body__button {
+    background-color: #111827;
+    border: 1px solid transparent;
+    border-radius: .75rem;
+    color: yellow;
+    cursor: pointer;
+    font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1.125rem;
+    font-weight: 600;
+    padding: .75rem 1.2rem;
+    text-align: center;
+    transition-duration: .2s;
+}
+
+.body__button:hover {
+    background-color: #374151;
+}
+
+.body__button:focus {
+    box-shadow: none;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+}
+
+@media screen and (min-width: 1440px) {
+
+    .body {
+        display: grid;
+        grid-template-rows: 20vh 80vh;
+        grid-template-columns: auto 1fr;
+        grid-template-areas:
+                "menu header"
+                "menu content";
+        color: #FFFFFF;
+    }
+
+    .header__menu, .header__logo {
+        display: none;
+    }
+
+    .main {
+        display: grid;
+        grid-area: content;
+    }
+
+    .main__form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 20% 70% 5%;
+        grid-template-areas:
+                "field field"
+                "picklist picklist"
+                "botao botao";
+
+    }
+
+    .body__header {
+        grid-area: header;
+        padding: 1em 4.5em 1em 4.5em;
+    }
+
+    .form__pick__list__container {
+        display: grid;
+        grid-area: picklist;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 50% 50%;
+        grid-template-areas: "disponivel selecionados";
+    }
+
+    .form__field {
+        grid-area: field;
+        padding: 1em 1em 1em 1em;
+    }
+
+    .form__pick__list__container .container__disponivel {
+        grid-area: disponivel;
+    }
+
+    .form__pick__list__container .container__selecionados {
+        grid-area: selecionados;
+    }
+
+    .body__button {
+        grid-area: botao;
+    }
+
+}
