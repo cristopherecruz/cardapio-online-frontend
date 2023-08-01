@@ -42,5 +42,16 @@ function initializeAvailableItems() {
     });
 }
 
+function confirmar() {
+    var resultado = confirm("Você realmente quer enviar este formulário?");
+    if (resultado == true) {
+        // O formulário será enviado
+        return true;
+    } else {
+        // O formulário não será enviado
+        return false;
+    }
+}
+
 // Chame esta função quando a página for carregada
 initializeAvailableItems();
