@@ -1,5 +1,5 @@
 .body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', 'Material Symbols Rounded', sans-serif;
     display: grid;
     grid-template-rows: 20vh 80vh;
     color: #FFFFFF;
@@ -81,6 +81,11 @@
             "img preco";
 }
 
+.form__field {
+    display: flex;
+    flex-direction: column;
+}
+
 .body__button {
     background-color: #111827;
     border: 1px solid transparent;
@@ -126,14 +131,20 @@
         grid-area: content;
     }
 
+    .lateral__logo {
+        height: 20vh;
+        display: flex;
+        align-items: center;
+    }
+
     .main__form {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 20% 70% 5%;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto 70% auto;
         grid-template-areas:
-                "field field"
-                "picklist picklist"
-                "botao botao";
+                ". . field field . ."
+                ". . picklist picklist . ."
+                ". . botao botao . .";
 
     }
 
@@ -150,7 +161,7 @@
         grid-template-areas: "disponivel selecionados";
     }
 
-    .picklist__card{
+    .picklist__card {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(2, 1fr);
@@ -161,7 +172,7 @@
 
     .picklist__img {
         grid-area: img;
-        max-width: 20%;
+        max-width: 60%;
         height: auto;
         justify-self: center;
     }

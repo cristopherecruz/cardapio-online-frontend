@@ -1,3 +1,62 @@
+let form = document.querySelector('.main__form');
+form.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const apiUrl = 'http://localhost:8080/api/combos';
+
+    const formData = new FormData(event.target);
+
+    const combo = {};
+    formData.forEach((value, key) => {
+        if (key === "preco") {
+            combo[key] = parseFloat(value);
+        } else {
+            combo[key] = value;
+        }
+    });
+
+    let produtos = document.querySelectorAll('.selected-item');
+    produtos.forEach(i => {
+        let nome = i.querySelector('.picklist__item__text')
+        let preco = i.querySelector('.picklist__item__preco')
+        let produtos = {nome: '', preco: ''}
+        produtos.nome = nome.textContent;
+        produtos.preco = parseFloat(preco.textContent.replace(/[\sA-Za-z]/g, ''));
+
+        combo['produtos'] = [produtos];
+    });
+
+    postData(apiUrl, combo)
+        .then(responseData => {
+            console.log('Response:', responseData);
+            // Do something with the response data here
+        })
+        .catch(error => {
+            // Handle any errors that occurred during the request
+            console.error('Error:', error);
+    });
+
+});
+
+function postData(url, data) {
+    return fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+    })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+
 function moveToSelected(item) {
     // Remove o item da lista de disponíveis
     item.parentNode.removeChild(item);
