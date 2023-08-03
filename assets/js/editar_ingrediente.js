@@ -24,3 +24,10 @@ cancelButton.addEventListener('click', () => {
     nomeInput.value = '';
     marcaInput.value = '';
 });
+
+const deleteButton = document.getElementById('deleteButton');
+
+deleteButton.addEventListener('click', () => {
+    // Insira aqui o código para executar quando o ícone de lixeira for clicado
+    alert('Ícone de lixeira clicado!');
+});
