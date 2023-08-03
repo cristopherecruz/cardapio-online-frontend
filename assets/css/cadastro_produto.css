@@ -112,12 +112,12 @@
 
     .main__form {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 20% 70% 5%;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto 70% auto;
         grid-template-areas:
-                "field field"
-                "picklist picklist"
-                "botao botao";
+                ". . field field . ."
+                ". . picklist picklist . ."
+                ". . botao botao . .";
 
     }
 
