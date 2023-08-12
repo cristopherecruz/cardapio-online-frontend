@@ -10,21 +10,11 @@
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap">
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
             <link rel="stylesheet" href="assets/css/cadastro_combo.css">
-            <link rel="stylesheet" href="assets/css/menu-lateral.css">
             <link rel="icon" type="image/png" href="assets/img/logo.jpg">
         </head>
         <body class="body">
-            <header class="body__header">
-                <button class="header__menu material-symbols-rounded" aria-label="Menu"><i></i></button>
-                <img class="header__logo" src="./assets/img/logo.jpg" alt="Logotipo">
-                <button class="header__notificacao material-symbols-rounded" aria-label="Notificação"><i></i></button>
-            </header>
-            <nav class="menu-lateral">
-                <div class="lateral__logo">
-                    <img class="menu-lateral__logo" src="assets/img/logo.jpg" alt="Logotipo">
-                </div>
-                <a href="#" class="menu-lateral__link menu-lateral__link--inicio">Cadastro de Combos</a>
-            </nav>
+            <custom-header class="custom-header"></custom-header>
+            <custom-menu-lateral class="custom-menu-lateral"></custom-menu-lateral>
             <main class="main">
                 <form class="main__form" onsubmit="return confirmar()" action="/seu-endereco-de-processamento">
                     <div class="form__field">
@@ -71,6 +61,7 @@
                 </form>
             </main>
             <script src="./assets/js/cadastro_combo.js"></script>
-            <script src="./assets/js/menu-lateral-ativo.js"></script>
+            <script src="./assets/js/header.js"></script>
+            <script src="./assets/js/menu-lateral.js"></script>
         </body>
 </html>

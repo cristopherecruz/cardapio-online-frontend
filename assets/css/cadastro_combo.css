@@ -1,16 +1,8 @@
 .body {
     font-family: 'Montserrat', 'Material Symbols Rounded', sans-serif;
     display: grid;
-    grid-template-rows: 20vh 80vh;
+    grid-template-rows: 20vh 0vh 80vh;
     color: #FFFFFF;
-}
-
-.body__header {
-    display: flex;
-    justify-content: space-between;
-    background-color: #15191C;
-    padding: 1em 1em 1em 1em;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.16);
 }
 
 .header__menu i::before {
@@ -122,10 +114,6 @@
         color: #FFFFFF;
     }
 
-    .header__menu, .header__logo {
-        display: none;
-    }
-
     .main {
         display: grid;
         grid-area: content;
@@ -146,11 +134,6 @@
                 ". . picklist picklist . ."
                 ". . botao botao . .";
 
-    }
-
-    .body__header {
-        grid-area: header;
-        padding: 1em 4.5em 1em 4.5em;
     }
 
     .form__pick__list__container {
@@ -191,6 +174,16 @@
 
     .body__button {
         grid-area: botao;
+    }
+
+    .custom-header {
+        display: grid;
+        grid-area: header;
+    }
+
+    .custom-menu-lateral {
+        display: grid;
+        grid-area: menu;
     }
 
 }

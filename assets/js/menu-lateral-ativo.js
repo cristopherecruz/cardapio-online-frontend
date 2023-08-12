@@ -1,13 +1,13 @@
 (() => {
 
-    const botaoMenu = document.querySelector('.header__menu');
-    const menu = document.querySelector('.menu-lateral');
+    const botaoMenu = document.querySelector('custom-header').shadowRoot.querySelector('.header__menu');
+    const menu = document.querySelector('custom-menu-lateral').shadowRoot.querySelector('.menu-lateral');
 
     botaoMenu.addEventListener('click', () => {
         menu.classList.toggle('menu-lateral--ativo');
     })
 
-    const menuLateralItems = document.querySelectorAll('.menu-lateral__link');
+    const menuLateralItems = document.querySelector('custom-header').shadowRoot.querySelectorAll('.menu-lateral__link');
     menuLateralItems.forEach(i => {
         i.addEventListener("click", function () {
             menuLateralItems.forEach(j => {
