@@ -1,0 +1,58 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.body__login_card {
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    text-align: center;
+}
+
+.body__input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.body__button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.body__button__facebook {
+    background-color: #3B5998;
+    color: white;
+}
+
+.body__button__google {
+    background-color: #DB4437;
+    color: white;
+}
+
+.body__button__login {
+    background-color: #007BFF;
+    color: white;
+}
+
+.body__divider {
+    margin: 20px 0;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #aaa;
+}

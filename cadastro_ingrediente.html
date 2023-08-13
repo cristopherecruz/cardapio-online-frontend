@@ -14,15 +14,8 @@
   <link rel="icon" type="image/png" href="assets/img/logo.jpg">
 </head>
 <body class="body">
-<header class="body__header">
-  <button class="header__menu material-symbols-rounded" aria-label="Menu"><i></i></button>
-  <img class="header__logo" src="./assets/img/logo.jpg" alt="Logotipo">
-  <button class="header__notificacao material-symbols-rounded" aria-label="Notificação"><i></i></button>
-</header>
-<nav class="menu-lateral">
-  <img class="menu-lateral__logo" src="assets/img/logo.jpg" alt="Logotipo">
-  <a href="#" class="menu-lateral__link menu-lateral__link--inicio">Cadastro de Combos</a>
-</nav>
+<custom-header class="custom-header"></custom-header>
+<custom-menu-lateral class="custom-menu-lateral"></custom-menu-lateral>
 <main class="main">
   <form class="main__form" onsubmit="return confirmar()" action="/seu-endereco-de-processamento">
     <div class="form__field">

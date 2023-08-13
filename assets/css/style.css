@@ -1,0 +1,117 @@
+.body {
+    font-family: 'Montserrat', sans-serif;
+    display: grid;
+    grid-template-rows: 15vh calc(80vh - 0.3em) 5vh;
+    grid-template-columns: auto;
+}
+
+.body__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1em 0 1em;
+    flex-direction: column;
+    background-image: url("/assets/img/bg_restaurante.png");
+}
+
+.header__logo {
+    width: 120px;
+    height: 120px;
+}
+
+.header__rectangle {
+    background-color: white;
+    padding: 5px;
+    font-size: 1.35rem;
+    width: 200px;
+    height: 45px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text__red{
+    color: red;
+}
+
+.body__main {
+    padding: 0 1em 0 1em;
+    background-color: #F2F2F2;
+}
+
+.main__container {
+    background-color: #FFFFFF;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas: "img info" "img info" "img info";
+    margin: 1em 0 1em 0;
+    border-radius: 5px;
+}
+
+.teste {
+    padding: 1em 1em 1em 1em;
+}
+
+.container__image {
+    grid-area: img;
+    width: 100%;
+    max-width: 110px;
+    padding: 1em 1em 1em 1em;
+}
+
+.image__item {
+    max-width: 100%;
+    height: auto;
+}
+
+.container_info {
+    grid-area: info;
+    display: grid;
+    grid-template-areas: "titulo" "descricao" "preco";
+    justify-content: center;
+    align-items: center;
+}
+
+.container__info {
+    grid-area: info;
+}
+
+.info__titulo {
+    grid-area: titulo;
+}
+
+.info__descricao {
+    grid-area: descricao;
+}
+
+.info__preco {
+    grid-area: preco;
+}
+
+.body__footer {
+    background: #1D232A;
+    padding-top: 0.3em;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.footer__nav {
+    display: flex;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu__div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: yellow;
+}
+
+.div__titulo {
+    font-size: 0.8em;
+    padding-top: 0.3em;
+}

@@ -14,15 +14,8 @@
     <link rel="icon" type="image/png" href="assets/img/logo.jpg">
 </head>
 <body class="body">
-<header class="body__header">
-    <button class="header__menu material-symbols-rounded" aria-label="Menu"><i></i></button>
-    <img class="header__logo" src="./assets/img/logo.jpg" alt="Logotipo">
-    <button class="header__notificacao material-symbols-rounded" aria-label="Notificação"><i></i></button>
-</header>
-<nav class="menu-lateral">
-    <img class="menu-lateral__logo" src="assets/img/logo.jpg" alt="Logotipo">
-    <a href="#" class="menu-lateral__link menu-lateral__link--inicio">Cadastro de Combos</a>
-</nav>
+<custom-header class="custom-header"></custom-header>
+<custom-menu-lateral class="custom-menu-lateral"></custom-menu-lateral>
 <main class="main">
     <form class="main__form" onsubmit="return confirmar()" action="/seu-endereco-de-processamento">
         <div class="form__field">
@@ -35,7 +28,7 @@
 
         </div>
         <div class="form__buttons">
-            <input class="body__button" type="submit" value="Salvar">
+            <input class="body__button" type="button" id="btSalvar" value="Salvar">
             <input class="body__button" type="button" id="btCancelar" value="Cancelar">
             <button id="deleteButton" type="button" class="body__button">
                 <span class="material-symbols-rounded">delete</span>
@@ -46,6 +39,8 @@
 
 <script src="./assets/js/cadastro_combo.js"></script>
 <script src="./assets/js/menu-lateral-ativo.js"></script>
+<script src="./assets/js/header.js"></script>
+<script src="./assets/js/menu-lateral.js"></script>
 <script src="./assets/js/editar_ingrediente.js"></script>
 </body>
 </html>

@@ -97,7 +97,7 @@
         grid-template-rows: auto 70% auto;
         grid-template-areas:
                 ". . field field . ."
-                ". . picklist picklist . ."
+                ". . dataview dataview . ."
                 ". . botao botao . .";
 
     }
@@ -111,7 +111,14 @@
         grid-area: field;
     }
 
-    .body__button {
+    .form__data_view {
+        display: grid;
+        grid-area: dataview;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 50% 50%;
+    }
+
+    .form__buttons {
         grid-area: botao;
     }
 
