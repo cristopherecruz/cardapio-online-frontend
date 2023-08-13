@@ -16,6 +16,14 @@ body {
     text-align: center;
 }
 
+.body__login__card__logo {
+    display: block;
+    margin: 0 auto;
+    width: 150px;  /* ajuste conforme necessário */
+    padding-bottom: 20px;
+}
+
+
 .body__input {
     width: 93%;
     padding: 10px;
